@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Daniel Río Alonso | Ingeniero Telemático · QA & Full-Stack / Android Dev</title>
+  <meta name="description" content="Portfolio profesional de Daniel Río Alonso - Ingeniero Telemático especializado en QA/Software Testing, Desarrollo Android (Kotlin) y Desarrollo Web Full-Stack (Python/Django)." />
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Google Fonts: Inter & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          },
+          colors: {
+            brand: {
+              50: '#eef2ff',
+              400: '#60a5fa',
+              500: '#3b82f6',
+              600: '#2563eb',
+              accent: '#10b981'
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      background-color: #0b0f19;
+      color: #e2e8f0;
+    }
+    .glass-card {
+      background: rgba(17, 24, 39, 0.75);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .glass-card:hover {
+      border-color: rgba(59, 130, 246, 0.4);
+    }
+    .gradient-text {
+      background: linear-gradient(135deg, #60a5fa 0%, #34d399 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .bg-grid {
+      background-size: 40px 40px;
+      background-image: 
+        linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    }
+  </style>
+</head>
+<body class="bg-grid antialiased selection:bg-blue-500 selection:text-white">
+
+  <!-- NAVBAR -->
+  <header class="fixed top-0 left-0 right-0 z-50 glass-card border-b border-slate-800/80">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <a href="#inicio" class="font-mono font-bold text-lg tracking-tight text-white flex items-center gap-2">
+        <span class="text-blue-400">&lt;</span>DanielRío<span class="text-emerald-400">/&gt;</span>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-6 text-sm font-medium text-slate-300">
+        <a href="#sobre-mi" class="hover:text-blue-400 transition">Sobre mí</a>
+        <a href="#especialidades" class="hover:text-blue-400 transition">Especialidades</a>
+        <a href="#experiencia" class="hover:text-blue-400 transition">Experiencia</a>
+        <a href="#proyectos" class="hover:text-blue-400 transition">Proyectos</a>
+        <a href="#skills" class="hover:text-blue-400 transition">Stack</a>
+        <a href="#formacion" class="hover:text-blue-400 transition">Formación</a>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <a href="https://github.com/drio2001" target="_blank" rel="noopener" class="p-2 text-slate-400 hover:text-white transition" title="GitHub">
+          <i data-lucide="github" class="w-5 h-5"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/daniel-rio-alonso-875887203" target="_blank" rel="noopener" class="p-2 text-slate-400 hover:text-blue-400 transition" title="LinkedIn">
+          <i data-lucide="linkedin" class="w-5 h-5"></i>
+        </a>
+        <a href="#contacto" class="bg-blue-600 hover:bg-blue-500 text-white text-xs sm:text-sm font-semibold px-4 py-2 rounded-lg transition shadow-lg shadow-blue-600/20">
+          Contactar
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section id="inicio" class="pt-32 pb-20 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
+    <div class="flex flex-col-reverse lg:flex-row items-center justify-between gap-12">
+      
+      <!-- Texto Principal -->
+      <div class="flex-1 text-center lg:text-left">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-mono mb-6">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+          Disponible para QA/Testing · Android · Full-Stack
+        </div>
+
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight mb-4">
+          Daniel Río Alonso
+        </h1>
+        
+        <h2 class="text-xl sm:text-2xl font-semibold gradient-text mb-6">
+          Ingeniero Telemático · QA Automation & Software Developer
+        </h2>
+
+        <p class="text-slate-400 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto lg:mx-0 mb-8">
+          Graduado en Ingeniería Telemática con experiencia profesional en <strong class="text-slate-200">calidad y validación de software (QA/Testing)</strong> en el sector ferroviario y apasionado por el <strong class="text-slate-200">desarrollo móvil (Android con Kotlin)</strong> y <strong class="text-slate-200">web Full-Stack (Python/Django)</strong>. Sólida base en C++, Python, arquitecturas distribuidas, redes y contenedorización con Docker.
+        </p>
+
+        <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4">
+          <a href="#proyectos" class="px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-semibold flex items-center gap-2 transition shadow-lg shadow-blue-600/25">
+            <i data-lucide="folder-git-2" class="w-5 h-5"></i>
+            Ver Proyectos
+          </a>
+          <a href="https://github.com/drio2001" target="_blank" rel="noopener" class="px-6 py-3 rounded-xl glass-card hover:bg-slate-800/80 text-slate-200 font-semibold flex items-center gap-2 transition">
+            <i data-lucide="github" class="w-5 h-5"></i>
+            GitHub (@drio2001)
+          </a>
+          <a href="https://www.linkedin.com/in/daniel-rio-alonso-875887203" target="_blank" rel="noopener" class="px-6 py-3 rounded-xl glass-card hover:bg-slate-800/80 text-blue-400 font-semibold flex items-center gap-2 transition">
+            <i data-lucide="linkedin" class="w-5 h-5"></i>
+            LinkedIn
+          </a>
+        </div>
+
+        <!-- Quick Stats -->
+        <div class="grid grid-cols-3 gap-4 mt-12 pt-8 border-t border-slate-800/80 max-w-lg mx-auto lg:mx-0">
+          <div>
+            <p class="text-2xl font-bold text-white font-mono">6+ meses</p>
+            <p class="text-xs text-slate-400">Experiencia QA (Siemens/Abaqo)</p>
+          </div>
+          <div>
+            <p class="text-2xl font-bold text-white font-mono">11+</p>
+            <p class="text-xs text-slate-400">Repositorios en GitHub</p>
+          </div>
+          <div>
+            <p class="text-2xl font-bold text-white font-mono">8+</p>
+            <p class="text-xs text-slate-400">Lenguajes de Programación</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Foto / Avatar Card -->
+      <div class="relative group">
+        <div class=" -inset-1 bg-gradient-to-r from-blue-600 to-emerald-500 rounded-3xl blur opacity-30 group-hover:opacity-60 transition duration-500"></div>
+        <div class="relative glass-card p-4 rounded-3xl flex flex-col items-center">
+          <img 
+            src="https://avatars.githubusercontent.com/u/150441703?v=4" 
+            alt="Daniel Río Alonso" 
+            class="w-56 h-56 sm:w-64 sm:h-64 rounded-2xl object-cover border border-slate-700"
+          />
+          <div class="mt-4 text-center">
+            <span class="font-mono text-xs text-slate-400 flex items-center justify-center gap-1.5">
+              <i data-lucide="map-pin" class="w-3.5 h-3.5 text-blue-400"></i>
+              Madrid, España (28942)
+            </span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ESPECIALIDADES / ROLES OBJETIVO -->
+  <section id="especialidades" class="py-16 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
+    <div class="text-center mb-12">
+      <span class="font-mono text-xs uppercase tracking-widest text-blue-400">Áreas de Especialización</span>
+      <h2 class="text-3xl font-bold text-white mt-2">¿Qué aporto a un equipo técnico?</h2>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-6">
+      <!-- Pilar 1: QA & Testing -->
+      <div class="glass-card p-6 rounded-2xl transition duration-300 hover:-translate-y-1">
+        <div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 mb-5">
+          <i data-lucide="shield-check" class="w-6 h-6"></i>
+        </div>
+        <h3 class="text-xl font-bold text-white mb-2">QA & Software Testing</h3>
+        <p class="text-slate-400 text-sm leading-relaxed mb-4">
+          Diseño y ejecución de planes de pruebas, validación de software crítico e industrial, automatización con Python y C++, y gestión de trazabilidad e incidencias con Jira bajo marcos Agile.
+        </p>
+        <div class="flex flex-wrap gap-1.5 font-mono text-xs text-emerald-400">
+          <span class="bg-emerald-500/10 px-2.5 py-1 rounded">QA Testing</span>
+          <span class="bg-emerald-500/10 px-2.5 py-1 rounded">Python</span>
+          <span class="bg-emerald-500/10 px-2.5 py-1 rounded">C++</span>
+          <span class="bg-emerald-500/10 px-2.5 py-1 rounded">Jira / Agile</span>
+        </div>
+      </div>
+
+      <!-- Pilar 2: Desarrollo Android & Sistemas Distribuidos -->
+      <div class="glass-card p-6 rounded-2xl transition duration-300 hover:-translate-y-1">
+        <div class="w-12 h-12 rounded-xl bg-blue-500/10 border border-blue-500/30 flex items-center justify-center text-blue-400 mb-5">
+          <i data-lucide="smartphone" class="w-6 h-6"></i>
+        </div>
+        <h3 class="text-xl font-bold text-white mb-2">Desarrollo Android (Kotlin)</h3>
+        <p class="text-slate-400 text-sm leading-relaxed mb-4">
+          Creación de aplicaciones nativas Android en Kotlin e XML, arquitecturas limpias, comunicación en tiempo real mediante WebSockets e integración con sistemas robóticos (ROS2).
+        </p>
+        <div class="flex flex-wrap gap-1.5 font-mono text-xs text-blue-400">
+          <span class="bg-blue-500/10 px-2.5 py-1 rounded">Kotlin</span>
+          <span class="bg-blue-500/10 px-2.5 py-1 rounded">Android SDK</span>
+          <span class="bg-blue-500/10 px-2.5 py-1 rounded">XML</span>
+          <span class="bg-blue-500/10 px-2.5 py-1 rounded">WebSockets / ROS2</span>
+        </div>
+      </div>
+
+      <!-- Pilar 3: Full-Stack Web & Telemática -->
+      <div class="glass-card p-6 rounded-2xl transition duration-300 hover:-translate-y-1">
+        <div class="w-12 h-12 rounded-xl bg-purple-500/10 border border-purple-500/30 flex items-center justify-center text-purple-400 mb-5">
+          <i data-lucide="layers" class="w-6 h-6"></i>
+        </div>
+        <h3 class="text-xl font-bold text-white mb-2">Full-Stack Web & Redes</h3>
+        <p class="text-slate-400 text-sm leading-relaxed mb-4">
+          Desarrollo de aplicaciones web completas con Django, JavaScript, HTML5, CSS3 y Bootstrap. Gestión de bases de datos SQL/NoSQL, despliegues en Docker y análisis de protocolos con Wireshark.
+        </p>
+        <div class="flex flex-wrap gap-1.5 font-mono text-xs text-purple-400">
+          <span class="bg-purple-500/10 px-2.5 py-1 rounded">Django</span>
+          <span class="bg-purple-500/10 px-2.5 py-1 rounded">JavaScript</span>
+          <span class="bg-purple-500/10 px-2.5 py-1 rounded">Docker</span>
+          <span class="bg-purple-500/10 px-2.5 py-1 rounded">SQL / MongoDB</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCIA LABORAL -->
+  <section id="experiencia" class="py-16 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
+    <div class="mb-12">
+      <span class="font-mono text-xs uppercase tracking-widest text-blue-400">Trayectoria Profesional</span>
+      <h2 class="text-3xl font-bold text-white mt-2">Experiencia Laboral</h2>
+    </div>
+
+    <div class="relative border-l-2 border-slate-800 ml-3 sm:ml-6 pl-6 sm:pl-8 space-y-10">
+      <div class="relative">
+        <div class=" -left-[33px] sm:-left-[41px] top-1.5 w-4 h-4 rounded-full bg-blue-500 border-4 border-[#0b0f19]"></div>
+        
+        <div class="glass-card p-6 sm:p-8 rounded-2xl">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4">
+            <div>
+              <h3 class="text-xl font-bold text-white">Software Testing / QA Engineer Intern</h3>
+              <p class="text-blue-400 font-medium">Abaqo Ingeniería Iberia · Siemens Contractor</p>
+            </div>
+            <div class="text-left sm:text-right font-mono text-xs text-slate-400">
+              <span class="inline-block bg-slate-800 px-3 py-1 rounded-full text-slate-200 mb-1">Marzo 2026 – Septiembre 2026</span>
+              <p>Tres Cantos, Madrid</p>
+            </div>
+          </div>
+
+          <ul class="space-y-2.5 text-slate-300 text-sm leading-relaxed list-disc list-inside">
+            <li>Ejecución de pruebas funcionales, de regresión e integración para sistemas de software ferroviario crítico en entorno subcontratado para <strong class="text-white">Siemens</strong>.</li>
+            <li>Desarrollo y mantenimiento de scripts de prueba y validación utilizando <strong class="text-white">C++ y Python</strong>.</li>
+            <li>Gestión del ciclo de vida de incidencias, reporte de defectos y documentación técnica de casos de prueba mediante <strong class="text-white">Jira</strong> bajo metodologías <strong class="text-white">Agile</strong>.</li>
+            <li>Trabajo estrecho con equipos multidisciplinares de ingeniería para asegurar los estándares de calidad y fiabilidad del código.</li>
+          </ul>
+
+          <div class="flex flex-wrap gap-2 mt-6 pt-4 border-t border-slate-800/80 font-mono text-xs">
+            <span class="px-2.5 py-1 rounded bg-slate-800 text-slate-300">C++</span>
+            <span class="px-2.5 py-1 rounded bg-slate-800 text-slate-300">Python</span>
+            <span class="px-2.5 py-1 rounded bg-slate-800 text-slate-300">Jira</span>
+            <span class="px-2.5 py-1 rounded bg-slate-800 text-slate-300">Software Testing / QA</span>
+            <span class="px-2.5 py-1 rounded bg-slate-800 text-slate-300">Agile</span>
+            <span class="px-2.5 py-1 rounded bg-slate-800 text-slate-300">Documentación Técnica</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROYECTOS DESTACADOS -->
+  <section id="proyectos" class="py-16 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
+    <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-6">
+      <div>
+        <span class="font-mono text-xs uppercase tracking-widest text-blue-400">Portfolio & GitHub (@drio2001)</span>
+        <h2 class="text-3xl font-bold text-white mt-2">Proyectos Destacados</h2>
+      </div>
+
+      <!-- Botones de Filtro -->
+      <div class="flex flex-wrap gap-2" id="project-filters">
+        <button onclick="filterProjects('all')" class="filter-btn active px-4 py-2 rounded-lg text-xs font-mono font-semibold bg-blue-600 text-white transition" data-filter="all">
+          Todos
+        </button>
+        <button onclick="filterProjects('android')" class="filter-btn px-4 py-2 rounded-lg text-xs font-mono font-semibold glass-card text-slate-300 hover:text-white transition" data-filter="android">
+          Android & Robótica
+        </button>
+        <button onclick="filterProjects('qa')" class="filter-btn px-4 py-2 rounded-lg text-xs font-mono font-semibold glass-card text-slate-300 hover:text-white transition" data-filter="qa">
+          QA & Testing
+        </button>
+        <button onclick="filterProjects('web')" class="filter-btn px-4 py-2 rounded-lg text-xs font-mono font-semibold glass-card text-slate-300 hover:text-white transition" data-filter="web">
+          Full-Stack Web
+        </button>
+        <button onclick="filterProjects('telematics')" class="filter-btn px-4 py-2 rounded-lg text-xs font-mono font-semibold glass-card text-slate-300 hover:text-white transition" data-filter="telematics">
+          Redes & Sistemas
+        </button>
+      </div>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-6" id="projects-grid">
+
+      <!-- Proyecto 1: TFG Android + ROS2 -->
+      <article class="project-card glass-card rounded-2xl p-6 flex flex-col justify-between transition duration-300" data-category="android telematics">
+        <div>
+          <div class="flex items-center justify-between gap-2 mb-4">
+            <span class="px-3 py-1 rounded-full text-xs font-mono bg-blue-500/10 text-blue-400 border border-blue-500/20">
+              Android · Sistemas Distribuidos (TFG)
+            </span>
+            <a href="https://github.com/drio2001" target="_blank" rel="noopener" class="text-slate-400 hover:text-white transition" title="Ver en GitHub">
+              <i data-lucide="external-link" class="w-5 h-5"></i>
+            </a>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-2">App Android de Control Robótico con ROS2 y WebSockets</h3>
+          <p class="text-slate-400 text-sm leading-relaxed mb-4">
+            Sistema distribuido orientado al ámbito asistencial/residencial que integra una aplicación nativa Android desarrollada en <strong class="text-slate-200">Kotlin</strong> conectada en tiempo real mediante <strong class="text-slate-200">WebSockets</strong> a una arquitectura robótica en <strong class="text-slate-200">ROS2</strong>, gestionando roles diferenciados (pacientes y personal sanitario).
+          </p>
+        </div>
+        <div>
+          <div class="flex flex-wrap gap-1.5 font-mono text-xs text-slate-300 pt-4 border-t border-slate-800/80">
+            <span class="bg-slate-800 px-2.5 py-1 rounded">Kotlin</span>
+            <span class="bg-slate-800 px-2.5 py-1 rounded">Android XML</span>
+            <span class="bg-slate-800 px-2.5 py-1 rounded">ROS2</span>
+            <span class="bg-slate-800 px-2.5 py-1 rounded">WebSockets</span>
+            <span class="bg-slate-800 px-2.5 py-1 rounded">Arquitectura Distribuida</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Proyecto 2: Automatización QA & Testing -->
+      <article class="project-card glass-card rounded-2xl p-6 flex flex-col justify-between transition duration-300" data-category="qa">
+        <div>
+          <div class="flex items-center justify-between gap-2 mb-4">
+            <span class="px-3 py-1 rounded-full text-xs font-mono bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+              QA · Testing Automation
+            </span>
+            <a href="https://github.com/drio2001?tab=repositories" target="_blank" rel="noopener" class="text-slate-400 hover:text-white transition" title="Ver en GitHub">
+              <i data-lucide="external-link" class="w-5 h-5"></i>
+            </a>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-2">Entorno de Pruebas Automatizadas y Validación en C++ / Python</h3>
+          <p class="text-slate-400 text-sm leading-relaxed mb-4">
+            Conjunto de herramientas y scripts para la automatización de pruebas unitarias, de integración y regresión sobre módulos en C++ y Python, contenedorizados con <strong class="text-slate-200">Docker</strong> para garantizar la reproducibilidad de entornos de QA.
+          </p>
+        </div>
+        <div>
+          <div class="flex flex-wrap gap-1.5 font-mono text-xs text-slate-300 pt-4 border-t border-slate-800/80">
+            <span class="bg-slate-800 px-2.5 py-1 rounded">Python</span>
+            <span class="bg-slate-800 px-2.5 py-1 rounded">C++</span>
+            <span class="bg-slate-800 px-2.5 py-1 rounded">Docker</span>
+            <span class="bg-slate-800 px-2.5 py-1 rounded">QA Automation</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Proyecto 3: Desarrollo Web Full-Stack con Django -->
+      <article class="project-card glass-card rounded-2xl p-6 flex flex-col justify-between transition duration-300" data-category="web">
+        <div>
+          <div class="flex items-center justify-between gap-2 mb-4">
+            <span class="px-3 py-1 rounded-full text-xs font-mono bg-purple-500/10 text-purple-400 border border-purple-500/20">
+              Full-Stack Web Development
+            </span>
+            <a href="https://github.com/drio2001?tab=repositories" target="_blank" rel="noopener" class="text-slate-400 hover:text-white transition" title="Ver en GitHub">
+              <i data-lucide="external-link" class="w-5 h-5"></i>
+            </a>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-2">Aplicación Web Full-Stack con Django y Persistencia Híbrida</h3>
+          <p class="text-slate-400 text-sm leading-relaxed mb-4">
+            Desarrollo de plataforma web con backend en <strong class="text-slate-200">Python (Django)</strong>, interfaz responsiva con <strong class="text-slate-200">HTML5, CSS3, Bootstrap y JavaScript</strong>, autenticación de usuarios, API REST e integración con bases de datos relacionales (MySQL/SQLite) y NoSQL (MongoDB).
+          </p>
+        </div>
+        <div>
+          <div class="flex flex-wrap gap-1.5 font-mono text-xs text-slate-300 pt-4 border-t border-slate-800/80">
+            <span class="bg-slate-800 px-2.5 py-1 rounded">Django</span>
+            <span class="bg-slate-800 px-2.5 py-1 rounded">Python</span>
+            <span class="bg-slate-800 px-2.5 py-1 rounded">JavaScript</span>
+            <span class="bg-slate-800 px-2.5 py-1 rounded">Bootstrap</span>
+            <span class="bg-slate-800 px-2.5 py-1 rounded">MySQL / SQLite</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Proyecto 4: Redes, Concurrencia y Sistemas en Go/Rust/C -->
+      <article class="project-card glass-card rounded-2xl p-6 flex flex-col justify-between transition duration-300" data-category="telematics">
+        <div>
+          <div class="flex items-center justify-between gap-2 mb-4">
+            <span class="px-3 py-1 rounded-full text-xs font-mono bg-amber-500/10 text-amber-400 border border-amber-500/20">
+              Ingeniería Telemática · Redes y Ciberseguridad
+            </span>
+            <a href="https://github.com/drio2001?tab=repositories" target="_blank" rel="noopener" class="text-slate-400 hover:text-white transition" title="Ver en GitHub">
+              <i data-lucide="external-link" class="w-5 h-5"></i>
+            </a>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-2">Protocolos de Red, Sistemas Concurrentes y Análisis de Tráfico</h3>
+          <p class="text-slate-400 text-sm leading-relaxed mb-4">
+            Colección de prácticas y proyectos de Ingeniería Telemática enfocados en programación de sistemas y sockets en <strong class="text-slate-200">C, Go y Rust</strong>, virtualización de servicios mediante <strong class="text-slate-200">Docker</strong> y auditoría de protocolos de red con <strong class="text-slate-200">Wireshark</strong>.
+          </p>
+        </div>
+        <div>
+          <div class="flex flex-wrap gap-1.5 font-mono text-xs text-slate-300 pt-4 border-t border-slate-800/80">
+            <span class="bg-slate-800 px-2.5 py-1 rounded">C / C++</span>
+            <span class="bg-slate-800 px-2.5 py-1 rounded">Go</span>
+            <span class="bg-slate-800 px-2.5 py-1 rounded">Rust</span>
+            <span class="bg-slate-800 px-2.5 py-1 rounded">Wireshark</span>
+            <span class="bg-slate-800 px-2.5 py-1 rounded">Docker</span>
+          </div>
+        </div>
+      </article>
+
+    </div>
+
+    <div class="mt-10 text-center">
+      <a href="https://github.com/drio2001?tab=repositories" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl glass-card hover:bg-slate-800 text-sm font-mono text-blue-400 transition">
+        <i data-lucide="git-branch" class="w-4 h-4"></i>
+        Explorar los 11 repositorios públicos en GitHub (@drio2001)
+      </a>
+    </div>
+  </section>
+
+  <!-- STACK TECNOLÓGICO -->
+  <section id="skills" class="py-16 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
+    <div class="mb-12">
+      <span class="font-mono text-xs uppercase tracking-widest text-blue-400">Competencias Técnicas</span>
+      <h2 class="text-3xl font-bold text-white mt-2">Stack Tecnológico</h2>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <!-- Lenguajes -->
+      <div class="glass-card p-6 rounded-2xl">
+        <h3 class="font-mono text-sm uppercase tracking-wider text-blue-400 mb-4 flex items-center gap-2">
+          <i data-lucide="code-2" class="w-4 h-4"></i> Lenguajes
+        </h3>
+        <div class="flex flex-wrap gap-2">
+          <span class="px-3 py-1.5 rounded-lg bg-slate-800/90 text-sm text-white font-medium">Python</span>
+          <span class="px-3 py-1.5 rounded-lg bg-slate-800/90 text-sm text-white font-medium">C / C++</span>
+          <span class="px-3 py-1.5 rounded-lg bg-slate-800/90 text-sm text-white font-medium">Kotlin</span>
+          <span class="px-3 py-1.5 rounded-lg bg-slate-800/90 text-sm text-slate-300">JavaScript</span>
+          <span class="px-3 py-1.5 rounded-lg bg-slate-800/90 text-sm text-slate-300">Java</span>
+          <span class="px-3 py-1.5 rounded-lg bg-slate-800/90 text-sm text-slate-300">Go</span>
+          <span class="px-3 py-1.5 rounded-lg bg-slate-800/90 text-sm text-slate-300">Rust</span>
+        </div>
+      </div>
+
+      <!-- Web & Mobile -->
+      <div class="glass-card p-6 rounded-2xl">
+        <h3 class="font-mono text-sm uppercase tracking-wider text-emerald-400 mb-4 flex items-center gap-2">
+          <i data-lucide="globe" class="w-4 h-4"></i> Web & Móvil
+        </h3>
+        <div class="flex flex-wrap gap-2">
+          <span class="px-3 py-1.5 rounded-lg bg-slate-800/90 text-sm text-white font-medium">Django</span>
+          <span class="px-3 py-1.5 rounded-lg bg-slate-800/90 text-sm text-white font-medium">Android (XML/Kotlin)</span>
+          <span class="px-3 py-1.5 rounded-lg bg-slate-800/90 text-sm text-slate-300">HTML5</span>
+          <span class="px-3 py-1.5 rounded-lg bg-slate-800/90 text-sm text-slate-300">CSS3</span>
+          <span class="px-3 py-1.5 rounded-lg bg-slate-800/90 text-sm text-slate-300">Bootstrap</span>
+        </div>
+      </div>
+
+      <!-- Bases de Datos -->
+      <div class="glass-card p-6 rounded-2xl">
+        <h3 class="font-mono text-sm uppercase tracking-wider text-purple-400 mb-4 flex items-center gap-2">
+          <i data-lucide="database" class="w-4 h-4"></i> Bases de Datos
+        </h3>
+        <div class="flex flex-wrap gap-2">
+          <span class="px-3 py-1.5 rounded-lg bg-slate-800/90 text-sm text-white font-medium">MySQL</span>
+          <span class="px-3 py-1.5 rounded-lg bg-slate-800/90 text-sm text-white font-medium">SQLite</span>
+          <span class="px-3 py-1.5 rounded-lg bg-slate-800/90 text-sm text-white font-medium">MongoDB</span>
+        </div>
+      </div>
+
+      <!-- Herramientas, QA & Redes -->
+      <div class="glass-card p-6 rounded-2xl">
+        <h3 class="font-mono text-sm uppercase tracking-wider text-amber-400 mb-4 flex items-center gap-2">
+          <i data-lucide="wrench" class="w-4 h-4"></i> DevOps, QA & Redes
+        </h3>
+        <div class="flex flex-wrap gap-2">
+          <span class="px-3 py-1.5 rounded-lg bg-slate-800/90 text-sm text-white font-medium">Docker</span>
+          <span class="px-3 py-1.5 rounded-lg bg-slate-800/90 text-sm text-white font-medium">Jira</span>
+          <span class="px-3 py-1.5 rounded-lg bg-slate-800/90 text-sm text-white font-medium">Wireshark</span>
+          <span class="px-3 py-1.5 rounded-lg bg-slate-800/90 text-sm text-slate-300">Agile / Scrum</span>
+          <span class="px-3 py-1.5 rounded-lg bg-slate-800/90 text-sm text-slate-300">Git & GitHub</span>
+          <span class="px-3 py-1.5 rounded-lg bg-slate-800/90 text-sm text-slate-300">ROS2</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FORMACIÓN E IDIOMAS -->
+  <section id="formacion" class="py-16 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
+    <div class="grid md:grid-cols-3 gap-6">
+      
+      <!-- Educación -->
+      <div class="md:col-span-2 glass-card p-6 sm:p-8 rounded-2xl">
+        <span class="font-mono text-xs uppercase tracking-widest text-blue-400">Educación</span>
+        <h2 class="text-2xl font-bold text-white mt-1 mb-6">Formación Académica</h2>
+
+        <div class="space-y-6">
+          <div class="flex gap-4">
+            <div class="w-10 h-10 rounded-lg bg-blue-500/10 border border-blue-500/30 flex items-center justify-center text-blue-400 shrink-0 mt-1">
+              <i data-lucide="graduation-cap" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <h3 class="text-lg font-bold text-white">Grado en Ingeniería Telemática</h3>
+              <p class="text-blue-400 text-sm">Universidad Rey Juan Carlos (URJC) · Campus de Fuenlabrada, Madrid</p>
+              <p class="text-slate-400 text-xs font-mono mt-1">Arquitectura de redes, sistemas distribuidos, ciberseguridad y desarrollo software</p>
+            </div>
+          </div>
+
+          <div class="flex gap-4 pt-4 border-t border-slate-800/80">
+            <div class="w-10 h-10 rounded-lg bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 shrink-0 mt-1">
+              <i data-lucide="award" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <h3 class="text-lg font-bold text-white">Curso Telemático de Desarrollo Software</h3>
+              <p class="text-emerald-400 text-sm">Mastermind · 2023</p>
+              <p class="text-slate-400 text-xs font-mono mt-1">Formación especializada en fundamentos de programación y desarrollo de software</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Idiomas y Competencias Transversales -->
+      <div class="glass-card p-6 sm:p-8 rounded-2xl flex flex-col justify-between">
+        <div>
+          <span class="font-mono text-xs uppercase tracking-widest text-emerald-400">Comunicación</span>
+          <h2 class="text-2xl font-bold text-white mt-1 mb-6">Idiomas & Soft Skills</h2>
+
+          <div class="space-y-4 mb-6">
+            <div>
+              <div class="flex justify-between text-sm mb-1">
+                <span class="font-semibold text-white">Español</span>
+                <span class="font-mono text-xs text-emerald-400">Nativo</span>
+              </div>
+              <div class="w-full h-2 bg-slate-800 rounded-full overflow-hidden">
+                <div class="bg-emerald-400 h-full w-full"></div>
+              </div>
+            </div>
+
+            <div>
+              <div class="flex justify-between text-sm mb-1">
+                <span class="font-semibold text-white">Inglés</span>
+                <span class="font-mono text-xs text-blue-400">Intermedio (B2)</span>
+              </div>
+              <div class="w-full h-2 bg-slate-800 rounded-full overflow-hidden">
+                <div class="bg-blue-400 h-full w-3/4"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="pt-4 border-t border-slate-800/80">
+          <p class="text-xs font-mono uppercase text-slate-400 mb-3">Valores Profesionales</p>
+          <div class="flex flex-wrap gap-2 text-xs">
+            <span class="px-2.5 py-1 rounded bg-slate-800 text-slate-300">Trabajo en equipo</span>
+            <span class="px-2.5 py-1 rounded bg-slate-800 text-slate-300">Adaptabilidad</span>
+            <span class="px-2.5 py-1 rounded bg-slate-800 text-slate-300">Calidad del código</span>
+            <span class="px-2.5 py-1 rounded bg-slate-800 text-slate-300">Resolución de problemas</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section id="contacto" class="py-20 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto text-center">
+    <div class="glass-card p-8 sm:p-12 rounded-3xl border border-blue-500/20">
+      <span class="font-mono text-xs uppercase tracking-widest text-blue-400">¿Hablamos?</span>
+      <h2 class="text-3xl sm:text-4xl font-bold text-white mt-2 mb-4">Disponible para nuevas oportunidades</h2>
+      <p class="text-slate-400 max-w-xl mx-auto mb-8">
+        Si buscas un perfil resolutivo para posiciones de <strong class="text-slate-200">QA / Software Testing</strong>, <strong class="text-slate-200">Desarrollo Android (Kotlin)</strong> o <strong class="text-slate-200">Desarrollo Web Full-Stack</strong> en Madrid o en remoto, no dudes en escribirme.
+      </p>
+
+      <div class="grid sm:grid-cols-3 gap-4 text-left max-w-2xl mx-auto mb-8">
+        <a href="mailto:daniel.rio.alonso@gmail.com" class="glass-card p-4 rounded-xl flex items-center gap-3 hover:border-blue-400 transition">
+          <i data-lucide="mail" class="w-5 h-5 text-blue-400 shrink-0"></i>
+          <div class="overflow-hidden">
+            <p class="text-xs text-slate-400">Email</p>
+            <p class="text-xs font-mono text-white truncate">daniel.rio.alonso@gmail.com</p>
+          </div>
+        </a>
+
+        <a href="tel:+34633597026" class="glass-card p-4 rounded-xl flex items-center gap-3 hover:border-emerald-400 transition">
+          <i data-lucide="phone" class="w-5 h-5 text-emerald-400 shrink-0"></i>
+          <div>
+            <p class="text-xs text-slate-400">Teléfono</p>
+            <p class="text-xs font-mono text-white">+34 633 59 70 26</p>
+          </div>
+        </a>
+
+        <a href="https://www.linkedin.com/in/daniel-rio-alonso-875887203" target="_blank" rel="noopener" class="glass-card p-4 rounded-xl flex items-center gap-3 hover:border-blue-400 transition">
+          <i data-lucide="linkedin" class="w-5 h-5 text-blue-400 shrink-0"></i>
+          <div>
+            <p class="text-xs text-slate-400">LinkedIn</p>
+            <p class="text-xs font-mono text-white">Daniel Río Alonso</p>
+          </div>
+        </a>
+      </div>
+
+      <a href="mailto:daniel.rio.alonso@gmail.com" class="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-semibold transition shadow-lg shadow-blue-600/30">
+        <i data-lucide="send" class="w-4 h-4"></i>
+        Enviar correo directo
+      </a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="py-8 border-t border-slate-800/80 text-center text-xs text-slate-500 font-mono">
+    <p>© 2026 Daniel Río Alonso · Ingeniero Telemático · Desarrollado con HTML5 & Tailwind CSS</p>
+  </footer>
+
+  <!-- SCRIPTS -->
+  <script>
+    lucide.createIcons();
+
+    function filterProjects(category) {
+      const cards = document.querySelectorAll('.project-card');
+      const buttons = document.querySelectorAll('.filter-btn');
+
+      buttons.forEach(btn => {
+        if (btn.dataset.filter === category) {
+          btn.classList.add('bg-blue-600', 'text-white');
+          btn.classList.remove('glass-card', 'text-slate-300');
+        } else {
+          btn.classList.remove('bg-blue-600', 'text-white');
+          btn.classList.add('glass-card', 'text-slate-300');
+        }
+      });
+
+      cards.forEach(card => {
+        const categories = card.dataset.category.split(' ');
+        if (category === 'all' || categories.includes(category)) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+  </script>
+</body>
+</html>
