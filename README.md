@@ -1,33 +1,33 @@
-# 🚀 Portfolio profesional — Daniel Río Alonso
+🚀 Professional Portfolio — Daniel Río Alonso
+Welcome to the repository of my personal web portfolio, where I present my background, projects, and technological skills as a Telematics Engineer.
 
-Bienvenido al repositorio de mi portfolio web personal, donde presento mi trayectoria, proyectos y mis competencias tecnológicas como **Ingeniero Telemático**.
+🌐 https://drio2001.github.io/
 
-🌐 [https://drio2001.github.io/](https://drio2001.github.io/)
+👨‍💻 About Me
+Graduated in Telematics Engineering from Universidad Rey Juan Carlos (URJC) with professional experience in software quality and validation (QA / Software Testing) and a strong focus on software development:
 
----
+  🛡️ QA & Software Testing (C++, Python, Jira, Agile, Docker)
 
-## 👨‍💻 Sobre mí
+  📱 Android Mobile Development (Kotlin, XML, WebSockets, ROS2 integration)
 
-Graduado en **Ingeniería Telemática** por la Universidad Rey Juan Carlos (URJC) con experiencia profesional en **calidad y validación de software (QA / Software Testing)** y enfocado en el desarrollo de software:
-- 🛡️ **QA & Software Testing** (C++, Python, Jira, Agile, Docker)
-- 📱 **Desarrollo móvil Android** (Kotlin, XML, WebSockets, integración con ROS2)
-- 💻 **Desarrollo Web Full-Stack** (Python, Django, JavaScript, HTML5, CSS3, Bootstrap, SQL / NoSQL)
-- 🌐 **Redes, Sistemas y Ciberseguridad** (Go, Rust, C, Wireshark)
+  💻 Full-Stack Web Development (Python, Django, JavaScript, HTML5, CSS3, Bootstrap, SQL / NoSQL)
 
----
+  🌐 Networks, Systems, and Cybersecurity (Go, Rust, C, Wireshark)
 
-## 🛠️ Tecnologías utilizadas en este Portfolio
+🛠️ Technologies Used in This Portfolio
+  1. Structure: Semantic HTML5
 
-* **Estructura:** HTML5 semántico
-* **Estilos y diseño responsivo:** Tailwind CSS (Diseño *Dark-Tech* adaptable a móvil y escritorio)
-* **Iconografía y tipografía:** Lucide Icons + Google Fonts (`Inter` & `JetBrains Mono`)
-* **Despliegue continuo (CI/CD):** GitHub Pages
+  2. Styles and Responsive Design: Tailwind CSS (Dark-Tech design, adaptable for mobile and desktop)
 
----
+  3. Icons and Typography: Lucide Icons + Google Fonts (Inter & JetBrains Mono)
 
-## 📫 Contacto
+  4. Continuous Deployment (CI/CD): GitHub Pages
 
-* 💼 **LinkedIn:** [Daniel Río Alonso](https://www.linkedin.com/in/daniel-rio-alonso-875887203)
-* 🐙 **GitHub:** [@drio2001](https://github.com/drio2001)
-* ✉️ **Email:** [daniel.rio.alonso@gmail.com](mailto:daniel.rio.alonso@gmail.com)
-* 📍 **Ubicación:** Madrid, España
+📫 Contact
+  💼 LinkedIn: Daniel Río Alonso
+
+  🐙 GitHub: @drio2001
+
+  ✉️ Email: daniel.rio.alonso@gmail.com
+
+  📍 Location: Madrid, Spain
