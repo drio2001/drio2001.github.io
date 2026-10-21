@@ -2,7 +2,7 @@
 
 Bienvenido al repositorio de mi portfolio web personal, donde presento mi trayectoria, proyectos y mis competencias tecnológicas como **Ingeniero Telemático**.
 
-🌐 **Ver Portfolio:** [https://drio2001.github.io/](https://drio2001.github.io/)
+🌐 [https://drio2001.github.io/](https://drio2001.github.io/)
 
 ---
 
