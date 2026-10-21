@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="es" class="dark scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Proyectos destacados</title>
+  <meta name="description" content="Catálogo de proyectos destacados de Daniel Río Alonso - GameRank (Django), sink-the-fleet (Pascal), shell (C), dragons&dungeons (Python) y TFG (Android Kotlin + ROS2)." />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@0.460.0"></script>
+
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    .bg-grid-pattern {
+      background-size: 36px 36px;
+      background-image: 
+        linear-gradient(to right, rgba(148, 163, 184, 0.08) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(148, 163, 184, 0.08) 1px, transparent 1px);
+    }
+    .gradient-text {
+      background: linear-gradient(135deg, #3b82f6 0%, #10b981 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  </style>
+</head>
+
+<body class="bg-slate-50 text-slate-800 dark:bg-[#0b0f19] dark:text-slate-200 bg-grid-pattern antialiased transition-colors duration-300 selection:bg-blue-600 selection:text-white min-h-screen flex flex-col justify-between">
+
+  <!-- NAVBAR -->
+  <header class="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-[#0b0f19]/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800/80 transition-colors">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <div class="flex items-center gap-4">
+        <a href="index.html" class="font-mono font-bold text-lg tracking-tight text-slate-900 dark:text-white flex items-center gap-1">
+          <span class="text-blue-600 dark:text-blue-400">&lt;</span>drio2001<span class="text-emerald-500 dark:text-emerald-400">/&gt;</span>
+        </a>
+        <span class="text-slate-300 dark:text-slate-700">|</span>
+        <a href="index.html" class="text-xs sm:text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 flex items-center gap-1.5 transition">
+          <i data-lucide="arrow-left" class="w-4 h-4"></i>
+          <span data-i18n="nav_back">Volver al inicio</span>
+        </a>
+      </div>
+
+      <!-- Controles: Idioma, Tema, Redes -->
+      <div class="flex items-center gap-2 sm:gap-3">
+        <button id="lang-toggle" onclick="toggleLanguage()" class="px-2.5 py-1.5 rounded-lg border border-slate-300 dark:border-slate-700 bg-slate-100 dark:bg-slate-800/80 text-xs font-mono font-bold text-slate-700 dark:text-slate-200 hover:border-blue-500 transition flex items-center gap-1.5" title="Cambiar idioma / Switch language">
+          <i data-lucide="globe" class="w-3.5 h-3.5 text-blue-500"></i>
+          <span id="lang-label">EN</span>
+        </button>
+
+        <button id="theme-toggle" onclick="toggleTheme()" class="p-2 rounded-lg border border-slate-300 dark:border-slate-700 bg-slate-100 dark:bg-slate-800/80 text-slate-700 dark:text-slate-200 hover:border-blue-500 transition" title="Cambiar tema / Toggle theme">
+          <i data-lucide="sun" id="theme-icon-sun" class="w-4 h-4 hidden text-amber-400"></i>
+          <i data-lucide="moon" id="theme-icon-moon" class="w-4 h-4 text-slate-700"></i>
+        </button>
+
+        <a href="https://github.com/drio2001" target="_blank" rel="noopener" class="p-2 text-slate-500 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white transition" title="GitHub">
+          <i data-lucide="github" class="w-5 h-5"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/daniel-rio-alonso-875887203" target="_blank" rel="noopener" class="p-2 text-slate-500 hover:text-blue-600 dark:text-slate-400 dark:hover:text-blue-400 transition" title="LinkedIn">
+          <i data-lucide="linkedin" class="w-5 h-5"></i>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- CONTENIDO PRINCIPAL DE PROYECTOS -->
+  <main class="pt-28 pb-16 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto w-full">
+    <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-10 gap-4">
+      <div>
+        <span class="font-mono text-xs uppercase tracking-widest text-blue-600 dark:text-blue-400">GitHub @drio2001</span>
+        <h1 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white mt-1" data-i18n="proj_heading">Proyectos destacados</h1>
+        <p class="text-slate-600 dark:text-slate-400 text-sm mt-2 max-w-2xl" data-i18n="proj_sub">
+          Selección de 5 proyectos clave desarrollados en Django, Pascal, C, Python y el Trabajo de Fin de Grado (TFG) en Android con ROS2.
+        </p>
+      </div>
+
+      <!-- Filtros -->
+      <div class="flex flex-wrap gap-2">
+        <button onclick="filterProjects('all')" class="filter-btn px-3.5 py-1.5 rounded-lg text-xs font-mono font-semibold bg-blue-600 text-white transition" data-filter="all" data-i18n="filter_all">Todos (5)</button>
+        <button onclick="filterProjects('web')" class="filter-btn px-3.5 py-1.5 rounded-lg text-xs font-mono font-semibold bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-300 transition" data-filter="web">Paginas (Web & Django)</button>
+        <button onclick="filterProjects('games')" class="filter-btn px-3.5 py-1.5 rounded-lg text-xs font-mono font-semibold bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-300 transition" data-filter="games" data-i18n="filter_games">Juegos</button>
+        <button onclick="filterProjects('systems')" class="filter-btn px-3.5 py-1.5 rounded-lg text-xs font-mono font-semibold bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-300 transition" data-filter="systems" data-i18n="filter_sys">Sistemas (C)</button>
+        <button onclick="filterProjects('tfg')" class="filter-btn px-3.5 py-1.5 rounded-lg text-xs font-mono font-semibold bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-300 transition" data-filter="tfg">★ Aplicacion - TFG (Android & ROS2)</button>
+      </div>
+    </div>
+
+    <!-- CUADRÍCULA DE PROYECTOS FINALIZADOS (1 AL 4) -->
+    <div class="grid md:grid-cols-2 gap-6" id="regular-projects-grid">
+
+      <!-- 1. GAMERANK (SE MANTIENE IGUAL) -->
+      <article class="project-card bg-white dark:bg-slate-900/90 border border-slate-200 dark:border-slate-800 rounded-2xl overflow-hidden shadow-sm flex flex-col justify-between hover:border-blue-500/60 transition" data-category="web">
+        <div>
+          <div class="relative bg-slate-950 aspect-video w-full overflow-hidden border-b border-slate-200 dark:border-slate-800">
+            <video 
+              id="gamerank-video" 
+              class="w-full h-full object-cover" 
+              controls 
+              preload="metadata"
+              poster="https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=900&q=80">
+              <source id="gamerank-video-src" src="" type="video/mp4">
+            </video>
+
+            <div id="gamerank-video-tabs" class="absolute top-3 left-3 flex flex-wrap gap-1.5 z-10">
+              <span class="px-2.5 py-1 rounded-md bg-blue-600/90 backdrop-blur text-white font-mono text-[11px] flex items-center gap-1">
+                <i data-lucide="play-circle" class="w-3.5 h-3.5"></i> GameRank Demo
+              </span>
+            </div>
+          </div>
+
+          <div class="p-6">
+            <div class="flex items-center justify-between gap-2 mb-2">
+              <span class="text-xs font-mono text-purple-600 dark:text-purple-400 font-semibold">Django · Full-Stack Web</span>
+              <a id="repo-link-gamerank" href="https://github.com/drio2001/final-game-rank" target="_blank" rel="noopener" class="text-xs font-mono text-blue-600 dark:text-blue-400 hover:underline flex items-center gap-1">
+                <i data-lucide="github" class="w-4 h-4"></i> <span data-i18n="btn_repo">Ver repositorio</span>
+              </a>
+            </div>
+
+            <h2 class="text-xl font-bold text-slate-900 dark:text-white mb-2" data-i18n="proj_gamerank_title">GameRank — Plataforma crítica de videojuegos</h2>
+            <p class="text-slate-600 dark:text-slate-400 text-sm mb-4" data-i18n="proj_gamerank_desc">
+              Página en Django para valorar, comentar y clasificar videojuegos consumiendo datos XML/JSON, con interfaz dinámica Bootstrap/HTMX, autenticación y persistencia en SQLite.
+            </p>
+          </div>
+        </div>
+
+        <div class="px-6 pb-5 pt-3 border-t border-slate-100 dark:border-slate-800/80 flex flex-wrap gap-1.5 font-mono text-xs">
+          <span class="px-2.5 py-1 rounded bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">Python</span>
+          <span class="px-2.5 py-1 rounded bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">Django</span>
+          <span class="px-2.5 py-1 rounded bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">Bootstrap / CSS</span>
+          <span class="px-2.5 py-1 rounded bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">SQLite / XML</span>
+        </div>
+      </article>
+
+      <!-- 2. SINK-THE-FLEET (EN PASCAL) -->
+      <article class="project-card bg-white dark:bg-slate-900/90 border border-slate-200 dark:border-slate-800 rounded-2xl overflow-hidden shadow-sm flex flex-col justify-between hover:border-blue-500/60 transition" data-category="games">
+        <div>
+          <div class="relative aspect-video w-full overflow-hidden bg-slate-900 border-b border-slate-200 dark:border-slate-800 group">
+            <img 
+              src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=900&q=80" 
+              alt="sink-the-fleet Pascal" 
+              class="w-full h-full object-cover group-hover:scale-105 transition duration-500 opacity-85"
+            />
+            <span class="absolute top-3 left-3 px-2.5 py-1 rounded-md bg-slate-900/85 backdrop-blur text-cyan-400 font-mono text-[11px] flex items-center gap-1">
+              <i data-lucide="grid" class="w-3.5 h-3.5"></i> Pascal · CLI Game
+            </span>
+          </div>
+
+          <div class="p-6">
+            <div class="flex items-center justify-between gap-2 mb-2">
+              <span class="text-xs font-mono text-cyan-600 dark:text-cyan-400 font-semibold">Pascal · Programación estructurada</span>
+              <a id="repo-link-fleet" href="https://github.com/drio2001/sink-the-fleet" target="_blank" rel="noopener" class="text-xs font-mono text-blue-600 dark:text-blue-400 hover:underline flex items-center gap-1">
+                <i data-lucide="github" class="w-4 h-4"></i> <span data-i18n="btn_repo">Ver repositorio</span>
+              </a>
+            </div>
+
+            <h2 class="text-xl font-bold text-slate-900 dark:text-white mb-2" data-i18n="proj_fleet_title">sink-the-fleet — Juego: Hundir la flota en Pascal</h2>
+            <p class="text-slate-600 dark:text-slate-400 text-sm mb-4" data-i18n="proj_fleet_desc">
+              Implementación completa en Pascal del clásico juego de estrategia naval Hundir la flota, con gestión de tableros mediante matrices, posicionamiento de barcos, validación de coordenadas y lógica de turnos por consola.
+            </p>
+          </div>
+        </div>
+
+        <div class="px-6 pb-5 pt-3 border-t border-slate-100 dark:border-slate-800/80 flex flex-wrap gap-1.5 font-mono text-xs">
+          <span class="px-2.5 py-1 rounded bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">Pascal</span>
+          <span class="px-2.5 py-1 rounded bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">Matrices & Estructuras</span>
+          <span class="px-2.5 py-1 rounded bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">Lógica de juego</span>
+          <span class="px-2.5 py-1 rounded bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">CLI</span>
+        </div>
+      </article>
+
+      <!-- 3. SHELL (EN C) -->
+      <article class="project-card bg-white dark:bg-slate-900/90 border border-slate-200 dark:border-slate-800 rounded-2xl overflow-hidden shadow-sm flex flex-col justify-between hover:border-blue-500/60 transition" data-category="systems">
+        <div>
+          <div class="relative aspect-video w-full overflow-hidden bg-slate-900 border-b border-slate-200 dark:border-slate-800 group">
+            <img 
+              src="https://images.unsplash.com/photo-1629654297299-c8506221ca97?auto=format&fit=crop&w=900&q=80" 
+              alt="shell en C" 
+              class="w-full h-full object-cover group-hover:scale-105 transition duration-500 opacity-85"
+            />
+            <span class="absolute top-3 left-3 px-2.5 py-1 rounded-md bg-slate-900/85 backdrop-blur text-emerald-400 font-mono text-[11px] flex items-center gap-1">
+              <i data-lucide="terminal" class="w-3.5 h-3.5"></i> C · Sistemas Operativos
+            </span>
+          </div>
+
+          <div class="p-6">
+            <div class="flex items-center justify-between gap-2 mb-2">
+              <span class="text-xs font-mono text-emerald-600 dark:text-emerald-400 font-semibold">C · Sistemas UNIX / POSIX</span>
+              <a id="repo-link-shell" href="https://github.com/drio2001/shell" target="_blank" rel="noopener" class="text-xs font-mono text-blue-600 dark:text-blue-400 hover:underline flex items-center gap-1">
+                <i data-lucide="github" class="w-4 h-4"></i> <span data-i18n="btn_repo">Ver repositorio</span>
+              </a>
+            </div>
+
+            <h2 class="text-xl font-bold text-slate-900 dark:text-white mb-2" data-i18n="proj_shell_title">shell — Intérprete de comandos en C</h2>
+            <p class="text-slate-600 dark:text-slate-400 text-sm mb-4" data-i18n="proj_shell_desc">
+              Desarrollo en lenguaje C de una shell UNIX propia con soporte para creación de procesos hijos (fork/exec), tuberías (pipes), redirección de entrada/salida, manejo de señales y ejecución en segundo plano.
+            </p>
+          </div>
+        </div>
+
+        <div class="px-6 pb-5 pt-3 border-t border-slate-100 dark:border-slate-800/80 flex flex-wrap gap-1.5 font-mono text-xs">
+          <span class="px-2.5 py-1 rounded bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">C</span>
+          <span class="px-2.5 py-1 rounded bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">Linux / POSIX</span>
+          <span class="px-2.5 py-1 rounded bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">Procesos y comunicacion de procesos</span>
+          <span class="px-2.5 py-1 rounded bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">Memoria dinámica</span>
+        </div>
+      </article>
+
+      <!-- 4. DRAGONS&DUNGEONS (EN PYTHON) -->
+      <article class="project-card bg-white dark:bg-slate-900/90 border border-slate-200 dark:border-slate-800 rounded-2xl overflow-hidden shadow-sm flex flex-col justify-between hover:border-blue-500/60 transition" data-category="games">
+        <div>
+          <div class="relative aspect-video w-full overflow-hidden bg-slate-900 border-b border-slate-200 dark:border-slate-800 group">
+            <img 
+              src="https://images.unsplash.com/photo-1610890716171-6b1bb98ffd09?auto=format&fit=crop&w=900&q=80" 
+              onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=900&q=80';"
+              alt="dragons&dungeons Python" 
+              class="w-full h-full object-cover group-hover:scale-105 transition duration-500 opacity-85"
+            />
+            <span class="absolute top-3 left-3 px-2.5 py-1 rounded-md bg-slate-900/85 backdrop-blur text-amber-400 font-mono text-[11px] flex items-center gap-1">
+              <i data-lucide="swords" class="w-3.5 h-3.5"></i> Python · RPG Game
+            </span>
+          </div>
+
+          <div class="p-6">
+            <div class="flex items-center justify-between gap-2 mb-2">
+              <span class="text-xs font-mono text-amber-600 dark:text-amber-400 font-semibold">Python · Programación orientada a objetos</span>
+              <a id="repo-link-dnd" href="https://github.com/drio2001/dragons-dungeons" target="_blank" rel="noopener" class="text-xs font-mono text-blue-600 dark:text-blue-400 hover:underline flex items-center gap-1">
+                <i data-lucide="github" class="w-4 h-4"></i> <span data-i18n="btn_repo">Ver repositorio</span>
+              </a>
+            </div>
+
+            <h2 class="text-xl font-bold text-slate-900 dark:text-white mb-2" data-i18n="proj_dnd_title">dragons&amp;dungeons — Juego: Dragones y Mazmorras en Python</h2>
+            <p class="text-slate-600 dark:text-slate-400 text-sm mb-4" data-i18n="proj_dnd_desc">
+              Juego de rol y aventura inspirado en Dungeons &amp; Dragons desarrollado en Python, aplicando programación orientada a objetos para personajes, combates por turnos, inventario y simulación de dados.
+            </p>
+          </div>
+        </div>
+
+        <div class="px-6 pb-5 pt-3 border-t border-slate-100 dark:border-slate-800/80 flex flex-wrap gap-1.5 font-mono text-xs">
+          <span class="px-2.5 py-1 rounded bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">Python</span>
+          <span class="px-2.5 py-1 rounded bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">POO / Clases</span>
+          <span class="px-2.5 py-1 rounded bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">Combate por turnos</span>
+          <span class="px-2.5 py-1 rounded bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">Algoritmia</span>
+        </div>
+      </article>
+
+    <!-- ========================================================================= -->
+    <!-- 5. SECCIÓN SEPARADA Y ESPECIAL: TRABAJO DE FIN DE GRADO (TFG - EN CURSO) -->
+    <!-- ========================================================================= -->
+    <div id="tfg-special-wrapper" class="mt-14 pt-10 border-t-2 border-dashed border-slate-300 dark:border-slate-800">
+      <div class="flex flex-wrap items-center justify-between gap-3 mb-6">
+        <div class="flex items-center gap-2.5">
+          <span class="px-3 py-1 rounded-full text-xs font-mono font-bold bg-gradient-to-r from-blue-600 to-emerald-500 text-white shadow-sm flex items-center gap-1.5">
+            <i data-lucide="sparkles" class="w-3.5 h-3.5"></i>
+            <span data-i18n="tfg_section_badge">PROYECTO ESPECIAL · TFG</span>
+          </span>
+          <span class="px-3 py-1 rounded-full text-xs font-mono font-semibold bg-amber-500/15 border border-amber-500/30 text-amber-600 dark:text-amber-400 flex items-center gap-1.5">
+            <span class="w-2 h-2 rounded-full bg-amber-500 animate-pulse"></span>
+            <span data-i18n="tfg_wip_badge">En desarrollo</span>
+          </span>
+        </div>
+        <span class="font-mono text-xs text-slate-500 dark:text-slate-400">Universidad Rey Juan Carlos (URJC)</span>
+      </div>
+
+      <article class="project-card bg-gradient-to-br from-blue-600/10 via-white to-emerald-500/10 dark:from-blue-950/40 dark:via-slate-900/95 dark:to-emerald-950/30 border-2 border-blue-500/40 dark:border-blue-500/50 rounded-3xl overflow-hidden shadow-xl transition" data-category="tfg">
+        <div class="grid lg:grid-cols-12 items-stretch">
+          
+          <!-- Imagen del TFG -->
+          <div class="lg:col-span-5 relative min-h-[240px] bg-slate-900 overflow-hidden group border-b lg:border-b-0 lg:border-r border-slate-200 dark:border-slate-800">
+            <img 
+              src="https://images.unsplash.com/photo-1526498460520-4c246339dccb?auto=format&fit=crop&w=900&q=80" 
+              alt="Android & ROS2 Architecture TFG" 
+              class="w-full h-full object-cover group-hover:scale-105 transition duration-500 opacity-90"
+            />
+            <span class="absolute top-4 left-4 px-3 py-1 rounded-md bg-slate-900/85 backdrop-blur text-blue-400 font-mono text-xs font-semibold">
+              Android · ROS2 · TFG
+            </span>
+          </div>
+
+          <!-- Contenido del TFG (mantenido igual y destacado) -->
+          <div class="lg:col-span-7 p-6 sm:p-8 flex flex-col justify-between">
+            <div>
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
+                <span class="text-xs font-mono text-blue-600 dark:text-blue-400 font-semibold">Kotlin · Sistemas Distribuidos</span>
+                <a id="repo-link-tfg" href="https://github.com/drio2001?tab=repositories" target="_blank" rel="noopener" class="text-xs font-mono text-blue-600 dark:text-blue-400 hover:underline flex items-center gap-1">
+                  <i data-lucide="github" class="w-4 h-4"></i> <span data-i18n="btn_repo">Ver repositorio</span>
+                </a>
+              </div>
+
+              <h2 class="text-2xl font-extrabold text-slate-900 dark:text-white mb-3" data-i18n="proj_ros_title">Aplicación de control robótico asistencial</h2>
+              <p class="text-slate-600 dark:text-slate-300 text-sm sm:text-base leading-relaxed mb-4" data-i18n="proj_ros_desc">
+                Aplicación nativa Android en Kotlin conectada mediante WebSockets a máquinas robóticas con ROS2 para gestionar asistencia en entornos residenciales según roles de paciente y enfermería.
+              </p>
+              <p class="text-xs font-mono text-amber-600 dark:text-amber-400 mb-6 flex items-center gap-1.5" data-i18n="proj_ros_status">
+                ★ Trabajo de Fin de Grado (TFG) en Ingeniería Telemática — Actualmente en fase activa de desarrollo e integración.
+              </p>
+            </div>
+
+            <div class="pt-4 border-t border-slate-200/80 dark:border-slate-800 flex flex-wrap gap-2 font-mono text-xs">
+              <span class="px-3 py-1 rounded-lg bg-blue-500/10 text-blue-700 dark:text-blue-300 font-semibold">Kotlin</span>
+              <span class="px-3 py-1 rounded-lg bg-blue-500/10 text-blue-700 dark:text-blue-300 font-semibold">Android XML</span>
+              <span class="px-3 py-1 rounded-lg bg-emerald-500/10 text-emerald-700 dark:text-emerald-300 font-semibold">ROS2</span>
+              <span class="px-3 py-1 rounded-lg bg-purple-500/10 text-purple-700 dark:text-purple-300 font-semibold">WebSockets</span>
+            </div>
+          </div>
+
+        </div>
+      </article>
+    </div>
+
+    <!-- Botón inferior de retorno e ir a GitHub -->
+    <div class="mt-12 flex flex-wrap items-center justify-center gap-4">
+      <a href="index.html" class="px-6 py-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-blue-500 text-slate-700 dark:text-slate-200 font-semibold text-sm flex items-center gap-2 transition">
+        <i data-lucide="arrow-left" class="w-4 h-4"></i>
+        <span data-i18n="nav_back">Volver al inicio</span>
+      </a>
+      <a href="https://github.com/drio2001?tab=repositories" target="_blank" rel="noopener" class="px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-semibold text-sm flex items-center gap-2 transition shadow-lg shadow-blue-600/25">
+        <i data-lucide="github" class="w-4 h-4"></i>
+        <span data-i18n="btn_all_repos">Explorar todos mis repositorios en GitHub</span>
+      </a>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="py-6 border-t border-slate-200 dark:border-slate-800/80 text-center text-xs text-slate-500 font-mono">
+    <p>© 2026 Daniel Río Alonso · <span data-i18n="footer_rights">Ingeniero Telemático</span></p>
+  </footer>
+
+  <!-- SCRIPTS: TEMA, IDIOMA, FILTROS, ENLACES DE GITHUB Y VÍDEOS DE GAMERANK -->
+  <script>
+    lucide.createIcons();
+
+    const translations = {
+      es: {
+        nav_back: "Volver al inicio",
+        proj_heading: "Proyectos destacados",
+        proj_sub: "Selección de 5 proyectos clave desarrollados en Django, Pascal, C, Python y el Trabajo de Fin de Grado (TFG) en Android con ROS2.",
+        filter_all: "Todos (5)",
+        filter_games: "Juegos",
+        filter_sys: "Sistemas (C)",
+        btn_repo: "Ver repositorio",
+        btn_all_repos: "Explorar todos mis repositorios en GitHub",
+        proj_gamerank_title: "GameRank — Plataforma crítica de videojuegos",
+        proj_gamerank_desc: "Página en Django para valorar, comentar y clasificar videojuegos consumiendo datos XML/JSON, con interfaz dinámica Bootstrap/HTMX, autenticación y persistencia en SQLite.",
+        proj_fleet_title: "Sink-the-Fleet — Hundir la flota en Pascal",
+        proj_fleet_desc: "Implementación completa en Pascal del clásico juego de estrategia naval Hundir la flota, con gestión de tableros mediante matrices, posicionamiento de barcos, validación de coordenadas y lógica de turnos por consola.",
+        proj_shell_title: "shell — Intérprete de comandos en C",
+        proj_shell_desc: "Desarrollo en lenguaje C de una shell UNIX propia con soporte para creación de procesos hijos (fork/exec), tuberías (pipes), redirección de entrada/salida, manejo de señales y ejecución en segundo plano.",
+        proj_dnd_title: "Dragons&Dungeons — Dragones y Mazmorras en Python",
+        proj_dnd_desc: "Juego de rol y aventura inspirado en Dragones y Mazmorras desarrollado en Python, aplicando programación orientada a objetos para personajes, combates por turnos, inventario y simulación de dados.",
+        tfg_section_badge: "PROYECTO ESPECIAL · TFG",
+        tfg_wip_badge: "En desarrollo",
+        proj_ros_title: "Aplicación de control robótico asistencial",
+        proj_ros_desc: "Aplicación nativa Android en Kotlin conectada mediante WebSockets a máquinas robóticas con ROS2 para gestionar asistencia en entornos residenciales según roles de paciente y enfermería.",
+        proj_ros_status: "★ Trabajo de Fin de Grado (TFG) en Ingeniería Telemática — Actualmente en fase activa de desarrollo e integración.",
+        footer_rights: "Ingeniero Telemático"
+      },
+      en: {
+        nav_back: "Back to home",
+        proj_heading: "Featured projects",
+        proj_sub: "Selection of 5 key technical projects built with Django, Pascal, C, Python, plus my Bachelor's Thesis (TFG) in Android Kotlin & ROS2.",
+        filter_all: "All (5)",
+        filter_games: "Games & Logic",
+        filter_sys: "Systems (C)",
+        btn_repo: "View repository",
+        btn_all_repos: "Explore all my repositories on GitHub",
+        proj_gamerank_title: "GameRank — Video Game Review Platform",
+        proj_gamerank_desc: "Django Full-Stack web platform to rate, review, and rank video games parsing XML/JSON feeds, featuring Bootstrap/HTMX dynamic views, user auth, and SQLite persistence.",
+        proj_fleet_title: "sink-the-fleet — Battleship Game in Pascal",
+        proj_fleet_desc: "Complete Pascal implementation of the classic Battleship naval strategy game, featuring matrix board management, ship placement validation, and turn-based console gameplay.",
+        proj_shell_title: "shell — Custom UNIX Command Interpreter in C",
+        proj_shell_desc: "Custom UNIX shell built in C supporting child process creation (fork/exec), inter-process pipes, I/O redirection, signal handling, and background job execution.",
+        proj_dnd_title: "dragons&dungeons — Python RPG Game",
+        proj_dnd_desc: "Role-playing adventure game inspired by Dungeons & Dragons built in Python, featuring object-oriented character classes, turn-based combat mechanics, inventory, and dice simulation.",
+        tfg_section_badge: "SPECIAL PROJECT · BACHELOR'S THESIS (TFG)",
+        tfg_wip_badge: "Work in progress",
+        tfg_wip_badge: "In Development · Work in Progress",
+        proj_ros_title: "Android Robotic Care Control Application",
+        proj_ros_desc: "Native Kotlin Android application connected via WebSockets to ROS2 robotic hardware to manage care home assistance for patient and nurse roles.",
+        proj_ros_status: "★ Bachelor's Thesis (TFG) in Telematics Engineering — Currently under active development and integration.",
+        footer_rights: "Telematics Engineer"
+      }
+    };
+
+    let currentLang = localStorage.getItem('portfolio_lang') || 'es';
+
+    function applyLanguage(lang) {
+      currentLang = lang;
+      localStorage.setItem('portfolio_lang', lang);
+      document.documentElement.lang = lang;
+      document.getElementById('lang-label').textContent = lang === 'es' ? 'EN' : 'ES';
+
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (translations[lang][key]) {
+          el.textContent = translations[lang][key];
+        }
+      });
+    }
+
+    function toggleLanguage() {
+      applyLanguage(currentLang === 'es' ? 'en' : 'es');
+    }
+
+    function updateThemeIcons(isDark) {
+      document.getElementById('theme-icon-sun').classList.toggle('hidden', !isDark);
+      document.getElementById('theme-icon-moon').classList.toggle('hidden', isDark);
+    }
+
+    function toggleTheme() {
+      const html = document.documentElement;
+      const isDark = html.classList.toggle('dark');
+      localStorage.setItem('portfolio_theme', isDark ? 'dark' : 'light');
+      updateThemeIcons(isDark);
+    }
+
+    (function initPreferences() {
+      const savedTheme = localStorage.getItem('portfolio_theme') || 'dark';
+      const isDark = savedTheme === 'dark';
+      document.documentElement.classList.toggle('dark', isDark);
+      updateThemeIcons(isDark);
+      applyLanguage(currentLang);
+    })();
+
+    function filterProjects(category) {
+      const cards = document.querySelectorAll('.project-card');
+      const buttons = document.querySelectorAll('.filter-btn');
+      const tfgWrapper = document.getElementById('tfg-special-wrapper');
+
+      buttons.forEach(btn => {
+        const active = btn.dataset.filter === category;
+        btn.className = active
+          ? 'filter-btn px-3.5 py-1.5 rounded-lg text-xs font-mono font-semibold bg-blue-600 text-white transition'
+          : 'filter-btn px-3.5 py-1.5 rounded-lg text-xs font-mono font-semibold bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-300 transition';
+      });
+
+      cards.forEach(card => {
+        const categories = card.dataset.category.split(' ');
+        card.style.display = (category === 'all' || categories.includes(category)) ? 'flex' : 'none';
+      });
+
+      if (tfgWrapper) {
+        tfgWrapper.style.display = (category === 'all' || category === 'tfg') ? 'block' : 'none';
+      }
+    }
+
+    // Sincroniza automáticamente los enlaces de los repositorios desde la API pública de GitHub (@drio2001)
+    async function syncGitHubRepoLinks() {
+      try {
+        const res = await fetch('https://api.github.com/users/drio2001/repos?per_page=100');
+        if (!res.ok) return;
+        const repos = await res.json();
+
+        repos.forEach(repo => {
+          const name = repo.name.toLowerCase();
+          if (name.includes('game') || name.includes('rank')) {
+            document.getElementById('repo-link-gamerank').href = repo.html_url;
+          } else if (name.includes('fleet') || name.includes('sink') || name.includes('flota')) {
+            document.getElementById('repo-link-fleet').href = repo.html_url;
+          } else if (name.includes('shell') || name.includes('minishell')) {
+            document.getElementById('repo-link-shell').href = repo.html_url;
+          } else if (name.includes('dragon') || name.includes('dungeon')) {
+            document.getElementById('repo-link-dnd').href = repo.html_url;
+          } else if (name.includes('tfg') || name.includes('ros') || name.includes('android')) {
+            document.getElementById('repo-link-tfg').href = repo.html_url;
+          }
+        });
+      } catch (e) {
+        console.warn('No se pudieron sincronizar dinámicamente los enlaces de GitHub:', e);
+      }
+    }
+
+    // Carga los vídeos de GameRank (comprobando tanto final-game-rank como GameRank)
+    async function loadGameRankVideos() {
+      const videoEl = document.getElementById('gamerank-video');
+      const tabsContainer = document.getElementById('gamerank-video-tabs');
+      const foundVideos = [];
+      const repoCandidates = ['final-game-rank', 'GameRank'];
+
+      try {
+        for (const repoName of repoCandidates) {
+          const readmeRes = await fetch(`https://api.github.com/repos/drio2001/${repoName}/readme`, {
+            headers: { 'Accept': 'application/vnd.github.v3.raw' }
+          });
+          if (readmeRes.ok) {
+            const readmeText = await readmeRes.text();
+            const urlRegex = /(https:\/\/github\.com\/user-attachments\/assets\/[a-zA-Z0-9-]+|https:\/\/[^\s"'<>]+\.(?:mp4|webm|mov))/gi;
+            const matches = readmeText.match(urlRegex) || [];
+            matches.forEach(url => {
+              if (!foundVideos.includes(url)) foundVideos.push(url);
+            });
+          }
+
+          const contentsRes = await fetch(`https://api.github.com/repos/drio2001/${repoName}/contents`);
+          if (contentsRes.ok) {
+            const files = await contentsRes.json();
+            if (Array.isArray(files)) {
+              files.forEach(file => {
+                if (file.name && /\.(mp4|webm|mov)$/i.test(file.name) && file.download_url) {
+                  if (!foundVideos.includes(file.download_url)) foundVideos.push(file.download_url);
+                }
+              });
+            }
+          }
+          if (foundVideos.length > 0) break;
+        }
+
+        if (foundVideos.length > 0) {
+          videoEl.src = foundVideos[0];
+          tabsContainer.innerHTML = '';
+
+          foundVideos.forEach((videoUrl, index) => {
+            const btn = document.createElement('button');
+            btn.className = index === 0
+              ? 'px-2.5 py-1 rounded-md bg-blue-600 text-white font-mono text-[11px] shadow transition'
+              : 'px-2.5 py-1 rounded-md bg-slate-900/80 text-slate-300 hover:bg-blue-600 hover:text-white font-mono text-[11px] shadow transition';
+            btn.textContent = `Vídeo ${index + 1}`;
+            btn.onclick = () => {
+              videoEl.src = videoUrl;
+              videoEl.play();
+              Array.from(tabsContainer.children).forEach(c => {
+                c.className = 'px-2.5 py-1 rounded-md bg-slate-900/80 text-slate-300 hover:bg-blue-600 hover:text-white font-mono text-[11px] shadow transition';
+              });
+              btn.className = 'px-2.5 py-1 rounded-md bg-blue-600 text-white font-mono text-[11px] shadow transition';
+            };
+            tabsContainer.appendChild(btn);
+          });
+        }
+      } catch (e) {
+        console.warn('No se pudieron obtener automáticamente los vídeos de GameRank:', e);
+      }
+    }
+
+    syncGitHubRepoLinks();
+    loadGameRankVideos();
+  </script>
+</body>
+</html>
