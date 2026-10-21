@@ -6,13 +6,13 @@ Welcome to the repository of my personal web portfolio, where I present my backg
 👨‍💻 About Me
 Graduated in Telematics Engineering from Universidad Rey Juan Carlos (URJC) with professional experience in software quality and validation (QA / Software Testing) and a strong focus on software development:
 
-  🛡️ QA & Software Testing (C++, Python, Jira, Agile, Docker)
+  - 🛡️ QA & Software Testing (C++, Python, Jira, Agile, Docker)
 
-  📱 Android Mobile Development (Kotlin, XML, WebSockets, ROS2 integration)
+  - 📱 Android Mobile Development (Kotlin, XML, WebSockets, ROS2 integration)
 
-  💻 Full-Stack Web Development (Python, Django, JavaScript, HTML5, CSS3, Bootstrap, SQL / NoSQL)
+  - 💻 Full-Stack Web Development (Python, Django, JavaScript, HTML5, CSS3, Bootstrap, SQL / NoSQL)
 
-  🌐 Networks, Systems, and Cybersecurity (Go, Rust, C, Wireshark)
+  - 🌐 Networks, Systems, and Cybersecurity (Go, Rust, C, Wireshark)
 
 🛠️ Technologies Used in This Portfolio
   1. Structure: Semantic HTML5
@@ -23,11 +23,11 @@ Graduated in Telematics Engineering from Universidad Rey Juan Carlos (URJC) with
 
   4. Continuous Deployment (CI/CD): GitHub Pages
 
-📫 Contact
-  💼 LinkedIn: Daniel Río Alonso
+📫 Contact:
+  - 💼 LinkedIn: Daniel Río Alonso
 
-  🐙 GitHub: @drio2001
+  - 🐙 GitHub: @drio2001
 
-  ✉️ Email: daniel.rio.alonso@gmail.com
+  - ✉️ Email: daniel.rio.alonso@gmail.com
 
-  📍 Location: Madrid, Spain
+  - 📍 Location: Madrid, Spain
